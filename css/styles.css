@@ -1,0 +1,365 @@
+/* Global */
+*{ 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+    
+}
+.container{
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.btn{
+    color: #333333;
+    background-color: #F2F2EB;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.75);
+    padding: 10px;
+    border-radius: 3px;
+    display: inline-block;
+    text-decoration: none;
+}
+.btn:hover{
+    background-color: #011126;
+    color: #F2F2EB;
+}
+h1{
+    font-family: DMSerif;
+    font-weight: 400;
+    color: #333333;
+    font-size: 48px;
+    margin: 32px 0;
+}
+h2{
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 36px;
+    color: #333333;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+/* Polices */
+@font-face{
+    font-family: Montserrat;
+    src:url(../fonts/Montserrat/montserrat-regular-webfont.woff2)format('woff2'),
+    url(../fonts/Montserrat/montserrat-regular-webfont.woff) format('woff'),
+    url(../fonts/Montserrat/Montserrat-Regular.ttf) format('truetype');
+}
+
+@font-face{
+    font-family: DMSerif;
+    src:url(../fonts/DMSerif/DMSerifDisplay-Regular.woff2)format('woff2'),
+    url(../fonts/DMSerif/DMSerifDisplay-Regular.woff) format('woff'),
+    url(../fonts/DMSerif/DMSerifDisplay-Regular.ttf) format('truetype');
+}
+/* ---------------- */
+/* Header */
+.logo{
+    font-family: DMSerif;
+    color: white;
+    font-weight: 400;
+    font-size: 32px;
+    margin: 22px 0;
+    text-decoration: none;
+}
+header{
+    background: rgba(57, 74, 89, 0.9);
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav{
+    width: 40%;
+}
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links li a{
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+.nav-links li a:hover:not(.current-page){
+    outline: 1px solid white;
+    outline-offset: 8px;
+}
+.current-page{
+    outline: 1px solid white;
+    outline-offset: 8px;
+}
+.nav-absolute{
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+/*Section Bannière*/
+.banner{
+    background-image: url(../img/accueil.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 677px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+.banner-text-content{
+    position: absolute;
+    top: 45%;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(28, 35, 40, 0) 0%, rgba(28, 35, 40, 0.4875) 25%, rgba(28, 35, 40, 0.65) 51.04%, rgba(28, 35, 40, 0.4875) 73.96%, rgba(28, 35, 40, 0) 100%);
+}
+.slogan{
+    font-family: Montserrat;
+    color: white;
+    font-weight: 600;
+    font-size: 48px;
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+.slogan-sous-texte{
+    color: white;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 20px;
+    margin: 10px auto;
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+.banner-text-content .btn{
+    margin-bottom: 15px;
+}
+/* Section qui sommes nous */
+.qui-somme-nous{
+    display: flex;
+    margin: 50px auto;
+}
+.qui-somme-nous video{
+    width: 50%;
+}
+.qui-somme-nous div{
+    padding-right: 45px;
+    color: #333333;
+    font-family: 'Montserrat';
+}
+.qui-somme-nous h2{
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+.qui-somme-nous p{
+    font-size: 18px;
+    line-height: 28px;
+}
+/* Page nos services */
+
+.nos-services-cartes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.nos-services-cartes article{
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+    border: 2px solid #394A59;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.35);
+    border-radius: 5px;
+    text-align: center;
+    height: 550px;
+}
+.nos-services-cartes article div{
+    height: 100%;
+}
+.nos-services-cartes .btn{
+    margin-top: auto;
+    margin-bottom: 20px;
+    align-self: center;
+}
+.nos-services-cartes h2{
+    margin-bottom: 10px;
+}
+.nos-services-cartes p{
+    font-size: 18px;
+    line-height: 28px;
+}
+.nos-services-cartes h2, .nos-services-cartes p{
+    text-align: left;
+    padding: 0 35px;
+    font-family: Montserrat;
+    color: #333333;
+
+}
+.nos-services-cartes img{
+    padding: 20px;
+    width: 100%;
+}
+/* Clients satisfaits */
+.commentaires{
+    margin-top: 45px;
+    background-color: #011126;
+    color: white;
+}
+.commentaires article{
+    text-align: center;
+}
+.commentaires article img{
+    border-radius: 100%;
+}
+.commentaires h2{
+    padding-top: 30px;
+    color: white;
+}
+.commentaires .nom-client{
+    font-size: 24px;
+    padding: 20px 0;
+}
+.commentaires .commentaire-client{
+    font-size: 18px;
+}
+.commentaires .container div{
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0;
+}
+/* Pages des services - entraineur - bronzage - kinésiologie */
+.sections-des-services{
+    display: flex;
+    justify-content: space-between;
+}
+.sections-des-services div{
+    width: 64%;
+}
+.sections-des-services div p{
+    margin: 20px 0;
+}
+.sections-des-services aside{
+    width: 31%;
+}
+.sections-des-services aside h2{
+    margin: 38px 0;
+}
+.sections-des-services article{
+    border: 2px solid #394A59;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.35);
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+.sections-des-services article img{
+    padding-top: 14px;
+}
+.sections-des-services article p{
+    font-size: 36px;
+    color: #333333;
+    font-weight: 400;
+    margin: 20px 0;
+}
+.sections-des-services .btn{
+    margin-bottom: 20px;
+}
+/* Page blogue */
+.blogue article{
+    display: flex;
+    justify-content: space-between;
+    border-top: #333333 1px solid;
+    padding-top: 30px;
+    margin-bottom: 70px;
+}
+.blogue img{
+    align-self: flex-start;
+    width: 32%;
+}
+.blogue div{
+    width: 65%;
+}
+.blogue p{
+    margin: 10px 0 25px 0;
+    color: #333333;
+    font-size: 18px;
+    font-weight: 400;
+}
+.blogue .blogue-date{
+    font-weight: 700;
+    margin-top: 10px;
+}
+.blogue h3{
+    font-size: 24px;
+    font-weight: 500;
+}
+/* Nous joindre */
+.nous-joindre-info{
+    display: flex;
+    justify-content: space-around;
+}
+.nous-joindre-info div{
+    display: flex;
+    align-items: center;
+    
+}
+.nous-joindre-info .btn{
+    margin-left: 10px;
+}
+iframe{
+    margin: 40px 0;
+}
+/* Nos forfaits */
+
+table{
+    width: 100%;
+    margin: 70px 0;
+    border-collapse: collapse;
+    color: #333333;
+}
+td, th{
+    border: #011126 solid 1px;
+}
+.th-forfait{
+    width: 30%;
+    padding: 20px 0;
+}
+.vide-tableau{
+    border: none;
+}
+.th-forfait, .col-forfait{
+    background-color: #011126;
+    color: white;
+    font-weight: 700;
+    font-size: 24px;
+}
+.forfait-bronze, .forfait-argent{
+    border-right: white solid 1px;
+}
+.forfait-inclus, .forfait-prix{
+    border-bottom: white solid 1px;
+}
+td{
+    text-align: center;
+    padding: 20px 0;
+}
+.prix{
+    font-size: 20px;
+    font-weight: 700;
+}
+.forfait-gris{
+    background-color: #F2F2EB;
+}
+/* Footer */ 
+footer{
+    background-color: #394A59;
+}
+footer p{
+    color: white;
+}
+.footer-flex{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 48px 0;
+}
